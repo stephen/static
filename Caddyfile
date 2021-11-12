@@ -1,6 +1,6 @@
-:80 {
-    root * out
-    # To turn on directory browsing, change the next line to "file_server browse"
-    file_server
-    # templates
+:80, stephenwan.com, stephenwan.net, stephen.fly.dev {
+	root * out
+	# To turn on directory browsing, change the next line to "file_server browse"
+	file_server
+	# templates
 }
