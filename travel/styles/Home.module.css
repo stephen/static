@@ -1,0 +1,31 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 70ch);
+  grid-gap: 1rem;
+  justify-items: start;
+  font-family: 'Tinos', serif;
+}
+
+.list {
+  width: 100%;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.place {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.place h3 {
+  flex: 0 0 12ch;
+  padding-left: 1rem;
+  font-size: 1.1rem;
+}
+
+
+.place p {
+  flex: 1 0;
+  padding: 1rem;
+}
