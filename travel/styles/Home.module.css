@@ -24,8 +24,11 @@
   font-size: 1.1rem;
 }
 
-
 .place p {
   flex: 1 0;
   padding: 1rem;
+}
+
+.place p + p {
+  padding-top: 0;
 }
