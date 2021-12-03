@@ -1,12 +1,11 @@
 import type { GetStaticPathsResult, GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import { getCities, getPlaces } from "../lib/api";
 import styles from "../styles/Home.module.css";
 
 export async function getStaticPaths(): Promise<GetStaticPathsResult> {
-  return { paths: getCities().map(city => ({ params: { city } })), fallback: "blocking" };
+  return { paths: getCities().map(city => ({ params: { city } })), fallback: false };
 }
 
 export async function getStaticProps(context: GetStaticPropsContext<{ city: string }>) {
@@ -25,6 +24,7 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
     return groups;
   }, new Map<string, typeof props["places"]>());
 
+  const isProd = process.env.NODE_ENV === 'production'
   return (
     <>
       <Head>
@@ -36,7 +36,7 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
         <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
       </Head>
       <header className={styles.header}>
-        <img src="/nyc.jpeg" />
+        <img src={isProd ? "/city-guide/nyc.jpeg" : "/nyc.jpeg"} width="100%" height="100%" />
         <aside>
           <h1>New York City</h1>
         </aside>

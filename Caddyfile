@@ -1,5 +1,5 @@
 :80 {
-    root * src
+    root * out
     # To turn on directory browsing, change the next line to "file_server browse"
     file_server
     # templates
