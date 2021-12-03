@@ -1,11 +1,37 @@
+.header {
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.header img {
+  height: 100%;
+  flex: 0 0 50%;
+  object-fit: cover;
+  object-position: left bottom;
+  overflow: hidden;
+}
+
+.header aside {
+  font-family: "EB Garamond", serif;
+  flex: 1 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f2f6;
+  font-size: 1.75rem;
+}
+
 .grid {
   display: grid;
 
-  margin: 1rem 0;
+  margin: 1rem 2rem;
   width: 100%;
 
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, 70ch);
+  grid-template-columns: repeat(auto-fit, minmax(auto, 70ch));
   grid-gap: 1rem;
 
   font-family: "EB Garamond", serif;
@@ -13,16 +39,15 @@
 
 .list {
   width: 100%;
-  background-color: #f1f2f6;
   padding: 1rem;
 }
 
 .list h1 {
+  display: inline-flex;
   font-family: "Public Sans", serif;
   font-weight: 700;
   font-size: 1.5rem;
-  float: right;
-  border-bottom: 4px solid #1e90ff;
+  border-bottom: .25rem solid #1e90ff;
   margin-bottom: 1rem;
 }
 
@@ -48,4 +73,23 @@
 
 .place p + p {
   padding-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 30vh;
+  }
+
+  .header img {
+    display: none;
+  }
+
+  .header aside {
+    font-size: 1rem;
+    flex: 1 0 100%;
+  }
+
+  .grid {
+    margin: 0;
+  }
 }

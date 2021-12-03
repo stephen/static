@@ -1,5 +1,6 @@
 import type { GetStaticPathsResult, GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import { getCities, getPlaces } from "../lib/api";
 import styles from "../styles/Home.module.css";
@@ -32,7 +33,14 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+        <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
       </Head>
+      <header className={styles.header}>
+        <img src="/nyc.jpeg" />
+        <aside>
+          <h1>New York City</h1>
+        </aside>
+      </header>
       <div className={styles.grid}>
         {Array.from(groups.entries()).map(([group, places], i) => {
           return (
