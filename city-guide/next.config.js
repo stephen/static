@@ -5,4 +5,5 @@ module.exports = {
   reactStrictMode: true,
   pageExtensions: ["md", "ts", "tsx"],
   basePath: isProd ? "/city-guide" : "",
+  trailingSlash: true,
 }
