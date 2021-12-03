@@ -1,4 +1,4 @@
-import type { GetStaticPathsContext, GetStaticPathsResult, GetStaticPropsContext, InferGetStaticPropsType } from "next";
+import type { GetStaticPathsResult, GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 import { getCities, getPlaces } from "../lib/api";
@@ -19,22 +19,28 @@ export async function getStaticProps(context: GetStaticPropsContext<{ city: stri
 }
 
 const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const groups = props.places.reduce((groups, place) => {
+    groups.set(place.kind, [...(groups.get(place.kind) || []), place]);
+    return groups;
+  }, new Map<string, typeof props["places"]>());
+
   return (
-    <div>
+    <>
       <Head>
         <title>New York City</title>
         <meta name="description" content="New York City" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
       </Head>
       <div className={styles.grid}>
-        {[props.places].map((p, i) => {
+        {Array.from(groups.entries()).map(([group, places], i) => {
           return (
             <div className={styles.list} key={i}>
-              {p.map(p => {
+              <h1>{group}</h1>
+              {places.map((p, i) => {
                 return (
-                  <div className={styles.place}>
+                  <div className={styles.place} key={i}>
                     <h3>{p.title}</h3>
                     <div>
                       <ReactMarkdown>
@@ -48,7 +54,7 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
           );
         })}
       </div>
-    </div>
+    </>
   );
 }
 

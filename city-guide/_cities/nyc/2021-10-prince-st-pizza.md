@@ -1,5 +1,5 @@
 ---
 title: Prince St. Pizza
-type: food
+kind: snack
 ---
 I like the pepperoni squares. Delicious but extremely greasy.

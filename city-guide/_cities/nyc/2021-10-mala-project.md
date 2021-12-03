@@ -1,5 +1,5 @@
 ---
 title: Mala Project
-type: food
+kind: dinner
 ---
 Drypot drypot drypot.

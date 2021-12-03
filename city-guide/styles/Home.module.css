@@ -1,14 +1,29 @@
 .grid {
   display: grid;
+
+  margin: 1rem 0;
+  width: 100%;
+
+  justify-content: center;
   grid-template-columns: repeat(auto-fit, 70ch);
   grid-gap: 1rem;
-  justify-items: start;
-  font-family: 'Tinos', serif;
+
+  font-family: "EB Garamond", serif;
 }
 
 .list {
   width: 100%;
-  background-color: rgba(0, 0, 0, .1);
+  background-color: #f1f2f6;
+  padding: 1rem;
+}
+
+.list h1 {
+  font-family: "Public Sans", serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  float: right;
+  border-bottom: 4px solid #1e90ff;
+  margin-bottom: 1rem;
 }
 
 .place {
@@ -18,17 +33,19 @@
   align-items: baseline;
 }
 
+.place  + .place{
+  padding-top: 1rem;
+}
+
 .place h3 {
   flex: 0 0 12ch;
-  padding-left: 1rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .place p {
   flex: 1 0;
-  padding: 1rem;
 }
 
 .place p + p {
-  padding-top: 0;
+  padding-top: 1rem;
 }
