@@ -68,6 +68,7 @@
   word-break: break-all;
   display: inline-flex;
   hyphens: auto;
+  padding-right: 1ch;
 }
 
 .place p {
