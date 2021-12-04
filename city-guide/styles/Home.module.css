@@ -58,13 +58,16 @@
   align-items: baseline;
 }
 
-.place  + .place{
+.place + .place {
   padding-top: 1rem;
 }
 
 .place h3 {
   flex: 0 0 12ch;
   font-size: 1rem;
+  word-break: break-all;
+  display: inline-flex;
+  hyphens: auto;
 }
 
 .place p {
