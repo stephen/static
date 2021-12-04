@@ -49,7 +49,7 @@ export function getPlace(slug: string): Place {
         throw new Error(`place ${slug} must have kind defined`);
     }
 
-    if (typeof data.title !== "string" || !data.title) {
+    if (!data.title) {
         throw new Error(`place ${slug} must have title defined`);
     }
 
@@ -59,7 +59,7 @@ export function getPlace(slug: string): Place {
     }
 
     return {
-        title: data.title,
+        title: `${data.title}`,
         rating,
         kind: data.kind,
         description: content,
