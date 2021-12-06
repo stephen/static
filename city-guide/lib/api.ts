@@ -3,12 +3,29 @@ import matter from "gray-matter";
 import path from "path";
 
 export function getCities() {
-    return fs.readdirSync(citiesDir);
+    return fs.readdirSync(citiesDir).map(c => cities[c]);
 }
 
 const citiesDir = path.join(process.cwd(), "_cities");
 
 type Rating = "favorite" | "recommended" | "okay" | "bad";
+
+const cities: Record<string, { name: string, abbr: string, imgPosition: string }> = {
+    nyc: {
+        abbr: "nyc",
+        name: "New York City",
+        imgPosition: "left bottom",
+    },
+    sf: {
+        abbr: "sf",
+        name: "San Francisco (Bay Area)",
+        imgPosition: "center",
+    }
+};
+
+export function getCity(city: string) {
+    return cities[city];
+}
 
 function isRating(input: unknown): input is Rating {
     if (typeof input !== "string") {
