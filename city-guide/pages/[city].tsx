@@ -38,7 +38,7 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
       </Head>
       <header className={styles.header}>
         <img src={`${imgPrefix}/${props.city.abbr}.jpeg`} width="100%" height="100%" style={{ objectPosition: props.city.imgPosition }} />
-        <aside>
+        <aside style={{ backgroundColor: `${props.city.color}10` }}>
           <h1>{props.city.name}</h1>
         </aside>
       </header>
@@ -46,7 +46,7 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
         {Array.from(groups.entries()).map(([group, places], i) => {
           return (
             <div className={styles.list} key={i}>
-              <h1>{group}</h1>
+              <h1 style={{ borderBottomColor: props.city.color }}>{group}</h1>
               {places.map((p, i) => {
                 return (
                   <div className={styles.place} key={i}>

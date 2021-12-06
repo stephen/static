@@ -10,16 +10,18 @@ const citiesDir = path.join(process.cwd(), "_cities");
 
 type Rating = "favorite" | "recommended" | "okay" | "bad";
 
-const cities: Record<string, { name: string, abbr: string, imgPosition: string }> = {
+const cities: Record<string, { name: string, abbr: string, imgPosition: string, color: string }> = {
     nyc: {
         abbr: "nyc",
         name: "New York City",
         imgPosition: "left bottom",
+        color: "#1e90ff",
     },
     sf: {
         abbr: "sf",
         name: "San Francisco (Bay Area)",
         imgPosition: "center",
+        color: "#ff6348",
     }
 };
 
