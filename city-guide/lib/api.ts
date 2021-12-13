@@ -3,7 +3,7 @@ import matter from "gray-matter";
 import path from "path";
 
 export function getCities() {
-    return fs.readdirSync(citiesDir).map(c => cities[c]);
+    return fs.readdirSync(citiesDir).filter(c => !c.startsWith(".")).map(c => cities[c]);
 }
 
 const citiesDir = path.join(process.cwd(), "_cities");
@@ -22,7 +22,13 @@ const cities: Record<string, { name: string, abbr: string, imgPosition: string, 
         name: "San Francisco (Bay Area)",
         imgPosition: "center",
         color: "#ff6348",
-    }
+    },
+    tpe: {
+        abbr: "tpe",
+        name: "Taipei",
+        imgPosition: "center top",
+        color: "#2ed573",
+    },
 };
 
 export function getCity(city: string) {

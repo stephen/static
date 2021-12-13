@@ -5,6 +5,7 @@ import { getCities, getCity, getPlaces } from "../lib/api";
 import styles from "../styles/Home.module.css";
 
 export async function getStaticPaths(): Promise<GetStaticPathsResult> {
+  console.log(getCities())
   return { paths: getCities().map(city => ({ params: { city: city.abbr } })), fallback: false };
 }
 
