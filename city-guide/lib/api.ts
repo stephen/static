@@ -17,6 +17,12 @@ const cities: Record<string, { name: string, abbr: string, imgPosition: string, 
         imgPosition: "left bottom",
         color: "#1e90ff",
     },
+    hnl: {
+        abbr: "hnl",
+        name: "Oahu",
+        imgPosition: "left top",
+        color: "#1e90ff",
+    },
     sf: {
         abbr: "sf",
         name: "San Francisco (Bay Area)",
