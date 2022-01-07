@@ -1,7 +1,5 @@
 ---
-title: Paalaa Kai Bakery
-kind: dinner
+title: McDonald's
+kind: lunch
 ---
-Everything is delicious and the stream of food feels never ending. Come with an empty stomach.
-
-Sadly, it looks like this spot closed for good recently.
+Yes, it's just McDonald's. But they have some Hawaiian specialty items! We had the Saimin (kind of like instant ramen with a seafood broth maybe?) and a breakfast plate (rice! and sausages). Not amazing but worth a try.
