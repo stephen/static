@@ -1,7 +1,7 @@
 import type { GetStaticPathsResult, GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
-import { getCities, getCity, getPlaces } from "../lib/api";
+import { getCities, getCity, getPlaces} from "../lib/api";
 import styles from "../styles/Home.module.css";
 
 export async function getStaticPaths(): Promise<GetStaticPathsResult> {
@@ -18,8 +18,10 @@ export async function getStaticProps(context: GetStaticPropsContext<{ city: stri
   }
 }
 
+const Ratings = ["favorite", "recommended", "okay", "bad"];
+
 const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const groups = props.places.reduce((groups, place) => {
+  const groups = props.places.sort((a, b) => Ratings.indexOf(a.rating) - Ratings.indexOf(b.rating)).reduce((groups, place) => {
     groups.set(place.kind, [...(groups.get(place.kind) || []), place]);
     return groups;
   }, new Map<string, typeof props["places"]>());

@@ -1,7 +1,6 @@
 ---
 title: Island Vintage Coffee
-kind: lunch
+kind: acai
+rating: favorite
 ---
-I don't like acai bowls, but I like the acai bowl here. My favorite is the liliko'i moana bowl. The honey is really what makes it work for me.
-
-I have not had the coffee.
+Pretty good. I think this one is tied for first with Crispy Grindz. My favorite is the liliko'i moana bowl. The honey is what makes it work.

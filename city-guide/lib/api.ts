@@ -50,7 +50,7 @@ function isRating(input: unknown): input is Rating {
 
 export interface Place {
     title: string;
-    rating?: Rating;
+    rating: Rating;
     kind: string;
     description: string;
     // date is in the format yyyy-mm. We prefer this over a Date object
