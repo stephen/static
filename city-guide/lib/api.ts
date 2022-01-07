@@ -10,7 +10,11 @@ const citiesDir = path.join(process.cwd(), "_cities");
 
 type Rating = "favorite" | "recommended" | "okay" | "bad";
 
-const cities: Record<string, { name: string, abbr: string, imgPosition: string, color: string }> = {
+interface Category {
+    description: string;
+}
+
+const cities: Record<string, { name: string, abbr: string, imgPosition: string, color: string, categories?: Record<string, Category> }> = {
     nyc: {
         abbr: "nyc",
         name: "New York City",
@@ -22,6 +26,11 @@ const cities: Record<string, { name: string, abbr: string, imgPosition: string, 
         name: "Oahu",
         imgPosition: "left top",
         color: "#1e90ff",
+        categories: {
+            acai: {
+                description: "I didn't think I liked acai bowls, but Yolanda took me to enough of them that I formed an opinion.",
+            }
+        }
     },
     sf: {
         abbr: "sf",

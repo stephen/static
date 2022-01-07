@@ -49,6 +49,7 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
           return (
             <div className={styles.list} key={i}>
               <h1 style={{ borderBottomColor: props.city.color }}>{group}</h1>
+              {props.city.categories && props.city.categories[group]? <p className={styles.listDescription}>{props.city.categories[group].description}</p> : null}
               {places.map((p, i) => {
                 return (
                   <div className={styles.place} key={i}>
