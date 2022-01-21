@@ -1,5 +1,5 @@
 ---
 title: Poke for the People
-kind: lunch
+kind: poke
 ---
 Pretty good poke, though not anything special.
