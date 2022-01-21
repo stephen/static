@@ -39,7 +39,7 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
         <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
       </Head>
       <header className={styles.header}>
-        <img src={`${imgPrefix}/${props.city.abbr}.jpeg`} width="100%" height="100%" style={{ objectPosition: props.city.imgPosition }} />
+        {props.city.imgPosition === "none" ? null : <img src={`${imgPrefix}/${props.city.abbr}.jpeg`} width="100%" height="100%" style={{ objectPosition: props.city.imgPosition }} />}
         <aside style={{ backgroundColor: `${props.city.color}10` }}>
           <h1>{props.city.name}</h1>
         </aside>

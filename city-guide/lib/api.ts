@@ -35,13 +35,13 @@ const cities: Record<string, { name: string, abbr: string, imgPosition: string, 
     sea: {
         abbr: "sea",
         name: "Seattle",
-        imgPosition: "center",
-        color: "#747d8c"
+        imgPosition: "none",
+        color: "#747d8c",
     },
     yvr: {
         abbr: "yvr",
         name: "Vancouver",
-        imgPosition: "center",
+        imgPosition: "none",
         color: "#a4b0be"
     },
     sf: {
