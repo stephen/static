@@ -32,6 +32,18 @@ const cities: Record<string, { name: string, abbr: string, imgPosition: string, 
             }
         }
     },
+    sea: {
+        abbr: "sea",
+        name: "Seattle",
+        imgPosition: "center",
+        color: "#747d8c"
+    },
+    yvr: {
+        abbr: "yvr",
+        name: "Vancouver",
+        imgPosition: "center",
+        color: "#a4b0be"
+    },
     sf: {
         abbr: "sf",
         name: "San Francisco (Bay Area)",

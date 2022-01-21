@@ -1,6 +1,6 @@
 ---
 title: Don Quixote
-kind: activities
+kind: shopping
 ---
 Your one-stop shop for anything you could possible need on a trip. It's like a Japanese Wal-mart.
 
