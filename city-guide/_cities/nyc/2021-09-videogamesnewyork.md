@@ -1,5 +1,5 @@
 ---
-title: Videogamesnewyork
+title: Videogames&shy;newyork
 kind: shopping
 ---
 This place is tiny but totally packed in with old consoles and games. Big nostalgia trip.

@@ -53,7 +53,7 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
               {places.map((p, i) => {
                 return (
                   <div className={styles.place} key={i}>
-                    <h3>{p.title}</h3>
+                    <h3><ReactMarkdown>{p.title}</ReactMarkdown></h3>
                     <div>
                       <ReactMarkdown>
                         {p.description}

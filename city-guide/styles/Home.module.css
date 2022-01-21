@@ -75,7 +75,6 @@
   font-size: 1rem;
   word-break: normal;
   display: inline-flex;
-  hyphens: auto;
   padding-right: 1ch;
 }
 
