@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  Tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build
+        run: |
+          cp -r ./src/. out/
+
+          pushd city-guide
+          npm install
+          npm run build
+          npm run export
+          popd
+          cp -r ./city-guide/out/. ./out/city-guide
