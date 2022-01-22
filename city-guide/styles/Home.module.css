@@ -1,6 +1,40 @@
-.cityLink {
+.container {
+  width: 100%;
+  margin: 2rem;
+  color: #2f3542;
+}
+
+.heading {
+  font-family: "EB Garamond", serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cities {
   display: flex;
-  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.city {
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+a.cityImage {
+  display: block;
+  margin-bottom: 8px;
+  width: 250px;
+  height: 250px;
+
+  background-size: cover;
+  background-color: #dfe4ea;
+
+  border: none;
+}
+
+.cityImage:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .header {
