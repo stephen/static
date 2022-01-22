@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import type { GetStaticPathsResult, GetStaticPropsContext, InferGetStaticPropsType } from "next";
-import { getImgPrefix } from "./utils";
+import { getImgPrefix } from "../utils/images";
 
 import { getCities } from "../lib/api";
 

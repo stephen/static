@@ -3,7 +3,7 @@ import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 import { getCities, getCity, getPlaces} from "../lib/api";
 import styles from "../styles/Home.module.css";
-import { getImgPrefix } from "./utils";
+import { getImgPrefix } from "../utils/images";
 
 export async function getStaticPaths(): Promise<GetStaticPathsResult> {
   return { paths: getCities().map(city => ({ params: { city: city.abbr } })), fallback: false };
