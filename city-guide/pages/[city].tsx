@@ -3,6 +3,7 @@ import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 import { getCities, getCity, getPlaces} from "../lib/api";
 import styles from "../styles/Home.module.css";
+import { getImgPrefix } from "./utils";
 
 export async function getStaticPaths(): Promise<GetStaticPathsResult> {
   return { paths: getCities().map(city => ({ params: { city: city.abbr } })), fallback: false };
@@ -26,8 +27,7 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
     return groups;
   }, new Map<string, typeof props["places"]>());
 
-  const isProd = process.env.NODE_ENV === "production";
-  const imgPrefix = isProd ? "/city-guide" : "";
+  const imgPrefix = getImgPrefix();
   return (
     <>
       <Head>
