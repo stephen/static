@@ -56,6 +56,12 @@ const cities: Record<string, { name: string, abbr: string, imgPosition: string, 
         imgPosition: "center top",
         color: "#2ed573",
     },
+    seoul: {
+        abbr: "seoul",
+        name: "Seoul, South Korea",
+        imgPosition: "none",
+        color: "#747d8c",
+    },
 };
 
 export function getCity(city: string) {
