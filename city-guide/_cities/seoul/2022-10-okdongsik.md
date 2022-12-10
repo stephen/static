@@ -1,5 +1,5 @@
 ---
 title: "Okdongsik (옥동식)"
-kind: korean
+kind: korean food
 ---
-Dwaeji gukbap (meat broth with rice and meat). The broth and meat were refreshing and really well-done.
+Dwaeji gukbap (pork rice soup). The broth and meat were refreshing and really well-done.
