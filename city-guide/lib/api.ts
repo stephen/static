@@ -68,6 +68,12 @@ const cities: Record<string, { name: string, abbr: string, imgPosition: string, 
         imgPosition: "none",
         color: "#747d8c",
     },
+    aus: {
+        abbr: "aus",
+        name: "Austin",
+        imgPosition: "none",
+        color: "##ffa502",
+    },
 };
 
 export function getCity(city: string) {
