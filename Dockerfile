@@ -1,4 +1,4 @@
-FROM caddy:2.4.1
+FROM caddy:2.7.6
 COPY ./Caddyfile /etc/caddy/Caddyfile
 WORKDIR /
 COPY ./out /out

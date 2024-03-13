@@ -1,5 +1,6 @@
 :80, :443, stephenwan.com, stephenwan.net, stephen.fly.dev {
 	root * out
+	try_files {path}.html
 	# To turn on directory browsing, change the next line to "file_server browse"
 	file_server
 	# templates
