@@ -1,6 +1,6 @@
 ---
 title: New World Mall (Flushing)
-kind: snacks
+kind: lunch
 ---
 The downstairs food court area of this mall has a ton of Chinese food options that are
 reasonably priced and delicious.
