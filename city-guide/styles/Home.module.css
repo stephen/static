@@ -104,9 +104,7 @@ a.cityImage {
   padding-top: 1rem;
 }
 
-.place h3 {
-  flex: 0 0 12ch;
-  font-size: 1rem;
+.place h3 { flex: 0 0 12ch; font-size: 1rem;
   word-break: normal;
   display: inline-flex;
   padding-right: 1ch;
@@ -137,4 +135,9 @@ a.cityImage {
   .grid {
     margin: 0;
   }
+}
+
+.closedDetails {
+  color: rgba(from #2f3542 r g b / 50%);
+  cursor: pointer;
 }

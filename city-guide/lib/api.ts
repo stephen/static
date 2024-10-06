@@ -96,6 +96,7 @@ export interface Place {
     // because next can't serialize the Date object and the string format
     // is sortable anyways.
     date: string;
+    closed: string | null;
 }
 
 export function getPlaces(city: string) {
@@ -128,11 +129,19 @@ export function getPlace(slug: string): Place {
         rating = data.rating;
     }
 
+    let closed: string | null = null;
+    if (data.closed && typeof data.closed === "string") {
+        closed = data.closed;
+    } else if (data.closed) {
+        throw new Error("closed should be a string containing any commentary")
+    }
+
     return {
         title: `${data.title}`,
         rating,
         kind: data.kind,
         description: content,
         date,
+        closed,
     };
 }
